@@ -1,16 +1,33 @@
-# stone
+# stone_chat
+<!-- 请将上面“应用名”替换为你本次参赛作品的应用名 -->
 
+
+## 项目简介
+<!-- 请描述此次参赛作品的简介 -->
 石聊-音视频聊天室
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## 使用指南
+<!-- 请描述该应用的使用步骤，包括下载、依赖安装、参数及软硬件配置（如有）等 -->
+待完善...
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 功能简介
+<!-- 请给出该应用的主要功能点 -->
+待完善...
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## 技术栈
+<!-- 请给出该应用主要的技术栈，包括声网和环信（如有用） SDK 版本 -->
+Flutter 3.0.5
+
+
+## 二次开发
+<!-- 1、如果是基于已有项目进行二次开发的参赛作品，请在此说明主要变更点，并附上原项目链接。2、如果是本次全新开发，请写“无” -->
+无
+
+
+---
+# 许可协议
+
+该参赛作品的源代码以`MIT`开源协议对外开源
