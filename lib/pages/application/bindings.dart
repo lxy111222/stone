@@ -1,4 +1,6 @@
+import 'package:stone/pages/account/controller.dart';
 import 'package:stone/pages/category/index.dart';
+import 'package:stone/pages/device/index.dart';
 import 'package:stone/pages/main/index.dart';
 import 'package:get/get.dart';
 
@@ -10,5 +12,7 @@ class ApplicationBinding implements Bindings {
     Get.lazyPut<ApplicationController>(() => ApplicationController());
     Get.lazyPut<MainController>(() => MainController());
     Get.lazyPut<CategoryController>(() => CategoryController());
+    Get.lazyPut<DeviceController>(() => DeviceController());
+    Get.lazyPut<AccountController>(() => AccountController());
   }
 }

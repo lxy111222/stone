@@ -13,8 +13,8 @@ AppBar transparentAppBar({
     elevation: 0,
     title: title != null
         ? Center(
-      child: title,
-    )
+            child: title,
+          )
         : null,
     leading: leading,
     actions: actions,

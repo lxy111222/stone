@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:im_flutter_sdk/im_flutter_sdk.dart';
+// import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 import 'package:stone/common/apis/apis.dart';
 import 'package:stone/common/entities/entities.dart';
 import 'package:stone/common/routers/routes.dart';
@@ -48,14 +48,14 @@ class SignInController extends GetxController {
       email: emailController.value.text,
       password: duSHA256(passController.value.text),
     );
-    try {
-      await EMClient.getInstance.login(emailController.value.text, passController.value.text);
-      // TODO 如果登录成功跳转到主页面
-    } on EMError catch (e) {
-      Loading.toast('登录失败 $e');
-    } finally {
-      print("登录结果");
-    }
+    // try {
+    //   await EMClient.getInstance.login(emailController.value.text, passController.value.text);
+    //   // TODO 如果登录成功跳转到主页面
+    // } on EMError catch (e) {
+    //   Loading.toast('登录失败 $e');
+    // } finally {
+    //   print("登录结果");
+    // }
 
     UserLoginResponseEntity userProfile = await UserAPI.login(
       params: params,

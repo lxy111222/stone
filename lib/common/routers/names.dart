@@ -6,4 +6,10 @@ class AppRoutes {
 
   static const Application = '/application';
   static const Category = '/category';
+
+  static const Device = '/device';
+  static const DeviceDetail = '/detail';
+
+  static const Account = '/account';
+  static const User = '/account/user';
 }

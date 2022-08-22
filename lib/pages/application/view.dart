@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:stone/common/values/values.dart';
 import 'package:stone/common/widgets/widgets.dart';
+import 'package:stone/pages/account/view.dart';
 import 'package:stone/pages/category/index.dart';
+import 'package:stone/pages/device/index.dart';
 import 'package:stone/pages/main/index.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -40,11 +42,11 @@ class ApplicationPage extends GetView<ApplicationController> {
       physics: const NeverScrollableScrollPhysics(),
       controller: controller.pageController,
       onPageChanged: controller.handlePageChanged,
-      children: <Widget>[
+      children: const <Widget>[
         MainPage(),
         CategoryPage(),
-        const Text('BookmarksPage'),
-        const Text('AccountPage'),
+        DevicePage(),
+        AccountPage(),
       ],
     );
   }

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:im_flutter_sdk/im_flutter_sdk.dart';
+// import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 import 'package:stone/common/apis/apis.dart';
 import 'package:stone/common/entities/entities.dart';
 import 'package:stone/common/services/services.dart';
@@ -60,6 +60,6 @@ class UserStore extends GetxController {
     await StorageService.to.remove(STORAGE_USER_TOKEN_KEY);
     _isLogin.value = false;
     token = '';
-    EMClient.getInstance.logout();
+    // EMClient.getInstance.logout();
   }
 }

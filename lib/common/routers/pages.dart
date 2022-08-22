@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:stone/common/middlewares/middlewares.dart';
+import 'package:stone/pages/account/bindings.dart';
+import 'package:stone/pages/account/user/view.dart';
+import 'package:stone/pages/account/view.dart';
 import 'package:stone/pages/application/index.dart';
 import 'package:stone/pages/category/index.dart';
+import 'package:stone/pages/device/deatil/bindings.dart';
+import 'package:stone/pages/device/deatil/view.dart';
+import 'package:stone/pages/device/index.dart';
 import 'package:stone/pages/frame/sign_in/index.dart';
 import 'package:stone/pages/frame/sign_up/index.dart';
 import 'package:stone/pages/frame/welcome/index.dart';
@@ -48,8 +54,34 @@ class AppPages {
     // 分类列表
     GetPage(
       name: AppRoutes.Category,
-      page: () => CategoryPage(),
+      page: () => const CategoryPage(),
       binding: CategoryBinding(),
+    ),
+
+    // 设备列表
+    GetPage(
+      name: AppRoutes.Device,
+      page: () => const DevicePage(),
+      binding: DeviceBinding(),
+    ),
+
+    GetPage(
+      name: AppRoutes.DeviceDetail,
+      page: () => const DeviceDetailPage(),
+      binding: DeviceDetailBinding(),
+    ),
+
+    // 我的
+    GetPage(
+      name: AppRoutes.Account,
+      page: () => const AccountPage(),
+      binding: AccountBinding(),
+      children: [
+        GetPage(
+          name: AppRoutes.User,
+          page: () => const UserPage(),
+        )
+      ],
     ),
   ];
 

@@ -5,20 +5,22 @@ import 'index.dart';
 import 'widgets/widgets.dart';
 
 class MainPage extends GetView<MainController> {
+  const MainPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          NewsCategoriesWidget(),
-          Divider(height: 1),
-          NewsRecommendWidget(),
-          Divider(height: 1),
-          NewsChannelsWidget(),
-          Divider(height: 1),
-          NewsListWidget(),
-          Divider(height: 1),
-          NewsletterWidget(),
+          // NewsCategoriesWidget(),
+          const Divider(height: 1),
+          // NewsRecommendWidget(),
+          const Divider(height: 1),
+          // NewsChannelsWidget(),
+          const Divider(height: 1),
+          // NewsListWidget(),
+          const Divider(height: 1),
+          // NewsletterWidget(),
         ],
       ),
     );

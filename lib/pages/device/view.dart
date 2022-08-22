@@ -4,13 +4,13 @@ import 'package:get/get.dart';
 import 'index.dart';
 import 'widgets/widgets.dart';
 
-class CategoryPage extends GetView<CategoryController> {
-  const CategoryPage({Key? key}) : super(key: key);
+class DevicePage extends GetView<DeviceController> {
+  const DevicePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: NewsPageList(),
+    return const Scaffold(
+      body: DevicePageList(),
     );
   }
 }

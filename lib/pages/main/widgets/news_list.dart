@@ -47,7 +47,7 @@ class NewsListWidget extends GetView<MainController> {
               children: <Widget>[
                 // 作者
                 Container(
-                  margin: EdgeInsets.all(0),
+                  margin: const EdgeInsets.all(0),
                   child: Text(
                     item.author ?? "",
                     style: TextStyle(
@@ -83,7 +83,7 @@ class NewsListWidget extends GetView<MainController> {
                   ),
                 ),
                 // Spacer
-                Spacer(),
+                const Spacer(),
                 // 一行 3 列
                 Container(
                   child: Row(

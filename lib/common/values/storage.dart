@@ -10,5 +10,8 @@ const String STORAGE_DEVICE_FIRST_OPEN_KEY = 'device_first_open';
 /// 首页新闻cacheKey
 const String STORAGE_INDEX_NEWS_CACHE_KEY = 'cache_index_news';
 
+/// 首页设备cacheKey
+const String STORAGE_INDEX_DEVICE_CACHE_KEY = 'cache_index_device';
+
 /// 多语言
 const String STORAGE_LANGUAGE_CODE = 'language_code';

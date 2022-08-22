@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:im_flutter_sdk/im_flutter_sdk.dart';
+// import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 import 'package:stone/common/services/services.dart';
 import 'package:stone/common/store/store.dart';
 import 'package:stone/common/utils/utils.dart';
@@ -21,7 +21,7 @@ class Global {
     Get.put<ConfigStore>(ConfigStore());
     Get.put<UserStore>(UserStore());
     //环信初始化
-    initSDK();
+    // initSDK();
   }
 
   static void setSystemUi() {
@@ -38,17 +38,17 @@ class Global {
     }
   }
 
-  static void initSDK() async {
-    var options = EMOptions(
-      appKey: '1102200603113637#oldwei',
-      deleteMessagesAsExitGroup: false,
-      deleteMessagesAsExitChatRoom: false,
-      autoAcceptGroupInvitation: true,
-      debugModel: true,
-    );
-
-    options.enableAPNs("EaseIM_APNS_Product");
-    await EMClient.getInstance.init(options);
-    debugPrint("has init");
-  }
+  // static void initSDK() async {
+  //   var options = EMOptions(
+  //     appKey: '1102200603113637#oldwei',
+  //     deleteMessagesAsExitGroup: false,
+  //     deleteMessagesAsExitChatRoom: false,
+  //     autoAcceptGroupInvitation: true,
+  //     debugModel: true,
+  //   );
+  //
+  //   options.enableAPNs("EaseIM_APNS_Product");
+  //   await EMClient.getInstance.init(options);
+  //   debugPrint("has init");
+  // }
 }
