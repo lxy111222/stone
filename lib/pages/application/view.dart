@@ -43,9 +43,9 @@ class ApplicationPage extends GetView<ApplicationController> {
       controller: controller.pageController,
       onPageChanged: controller.handlePageChanged,
       children: const <Widget>[
+        DevicePage(),
         MainPage(),
         CategoryPage(),
-        DevicePage(),
         AccountPage(),
       ],
     );

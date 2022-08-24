@@ -10,7 +10,8 @@ class CategoryPage extends GetView<CategoryController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: NewsPageList(),
+      body: Text("待开发"),
+      // body: NewsPageList(),
     );
   }
 }

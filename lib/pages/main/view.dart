@@ -10,19 +10,20 @@ class MainPage extends GetView<MainController> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          // NewsCategoriesWidget(),
-          const Divider(height: 1),
-          // NewsRecommendWidget(),
-          const Divider(height: 1),
-          // NewsChannelsWidget(),
-          const Divider(height: 1),
-          // NewsListWidget(),
-          const Divider(height: 1),
-          // NewsletterWidget(),
-        ],
-      ),
+      child: Text("待开发"),
+      // child: Column(
+      //   children: <Widget>[
+      //     // NewsCategoriesWidget(),
+      //     const Divider(height: 1),
+      //     // NewsRecommendWidget(),
+      //     const Divider(height: 1),
+      //     // NewsChannelsWidget(),
+      //     const Divider(height: 1),
+      //     // NewsListWidget(),
+      //     const Divider(height: 1),
+      //     // NewsletterWidget(),
+      //   ],
+      // ),
     );
   }
 }

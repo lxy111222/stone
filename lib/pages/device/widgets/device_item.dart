@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:stone/common/entities/device.dart';
 import 'package:stone/common/routers/names.dart';
-import 'package:stone/common/utils/utils.dart';
 import 'package:stone/common/values/values.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:stone/common/widgets/image.dart';
@@ -25,7 +24,7 @@ Widget deviceListItem(DeviceItem item) {
             Get.toNamed(AppRoutes.DeviceDetail, arguments: item);
           },
           child: netImageCached(
-            "http://up.enterdesk.com/edpic_source/56/51/c0/5651c08bdb088ba8102b279518b57574.jpg",
+            "$SERVER_API_URL${item.screenPicture}",
             width: 121.w,
             height: 121.w,
           ),
@@ -36,11 +35,11 @@ Widget deviceListItem(DeviceItem item) {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              // 作者
+              // 设备类型
               Container(
                 margin: EdgeInsets.all(0),
                 child: Text(
-                  item.ipv4Address ?? "",
+                  item.deviceDescription ?? "",
                   style: TextStyle(
                     fontFamily: 'Avenir',
                     fontWeight: FontWeight.normal,
@@ -62,7 +61,7 @@ Widget deviceListItem(DeviceItem item) {
                 child: Container(
                   margin: EdgeInsets.only(top: 10.h),
                   child: Text(
-                    item.deviceSn ?? "",
+                    item.title ?? item.ipv4Address ?? "",
                     style: TextStyle(
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.w500,
@@ -88,11 +87,13 @@ Widget deviceListItem(DeviceItem item) {
                         maxWidth: 60.w,
                       ),
                       child: Text(
-                        item.loginId.toString(),
+                        item.loginId! > -1 ? "已注册" : "未注册",
                         style: TextStyle(
                           fontFamily: 'Avenir',
                           fontWeight: FontWeight.normal,
-                          color: AppColors.secondaryElementText,
+                          color: item.loginId! > -1
+                              ? AppColors.secondaryElementText
+                              : AppColors.thirdElementText,
                           fontSize: 14.sp,
                           height: 1,
                         ),
@@ -100,16 +101,16 @@ Widget deviceListItem(DeviceItem item) {
                         maxLines: 1,
                       ),
                     ),
-                    // 添加时间
+                    // IP地址
                     Container(
-                      width: 15.w,
+                      width: 10.w,
                     ),
                     ConstrainedBox(
                       constraints: BoxConstraints(
-                        maxWidth: 100.w,
+                        maxWidth: 115.w,
                       ),
                       child: Text(
-                        '• ${duTimeLineFormat(item.bootTime ?? DateTime(0))}',
+                        '• ${item.ipv4Address}',
                         style: TextStyle(
                           fontFamily: 'Avenir',
                           fontWeight: FontWeight.normal,
@@ -117,7 +118,7 @@ Widget deviceListItem(DeviceItem item) {
                           fontSize: 14.sp,
                           height: 1,
                         ),
-                        overflow: TextOverflow.clip,
+                        // overflow: TextOverflow.clip,
                         maxLines: 1,
                       ),
                     ),

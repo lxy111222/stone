@@ -21,12 +21,14 @@ class ResponseResult {
 }
 
 class RequestLoginParams {
+  String? title;
   String ipv4Address;
   String username;
   String password;
   String commandPort;
 
   RequestLoginParams({
+    this.title,
     required this.ipv4Address,
     required this.username,
     required this.password,
@@ -34,6 +36,7 @@ class RequestLoginParams {
   });
 
   Map<String, dynamic> toJson() => {
+        "title": title,
         "ipv4Address": ipv4Address,
         "username": username,
         "password": password,

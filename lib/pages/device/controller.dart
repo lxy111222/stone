@@ -26,7 +26,6 @@ class DeviceController extends GetxController {
 
   void onRefresh() {
     fetchDeviceList(isRefresh: true).then((_) {
-      print("页面初始化的时候执行");
       refreshController.refreshCompleted(resetFooterState: true);
     }).catchError((_) {
       refreshController.refreshFailed();
